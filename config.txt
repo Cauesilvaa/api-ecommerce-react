@@ -1,0 +1,15 @@
+* Para criar o projeto
+- yarn init -y
+- yarn add typescript @types/express ts-node-dev -D
+- yarn add express
+- yarn tsc --init (para inicisar o typescript, quando rodar esse comando vai criar o arquivo 'tsconfig.json')
+- no arquivo tsconfig.json mudar o ("strict": true) para ("strict": false)
+- yarn add prisma
+- yarn add @prisma/client
+
+* Para configurar o prisma a partir de um db criado
+- configurar o 'DATABASE_URL' no arquivo .env
+- configurar schema.prisma para mysql e os models
+
+* Dependencias
+- yarn add nodemon
