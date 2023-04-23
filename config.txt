@@ -9,7 +9,10 @@
 
 * Para configurar o prisma a partir de um db criado
 - configurar o 'DATABASE_URL' no arquivo .env
-- configurar schema.prisma para mysql e os models
+- configurar schema.prisma para mysql
 
-* Dependencias
+* Para o prisma criar os models de acordo com o banco de dados automaticamente
+- npx prisma db pull
+
+* Dependencias (não estou usando)
 - yarn add nodemon
