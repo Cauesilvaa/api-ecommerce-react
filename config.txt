@@ -1,5 +1,8 @@
 * Para rodar o projeto
-- yarn run dev
+- yarn start ou yarn dev (start: to executando com o ts-node e dev: to executando com nodemon)
+
+* Para rodar o prisma studio
+- yarn prisma studio
 
 * Para criar o projeto
 - yarn init -y
@@ -17,5 +20,12 @@
 * Para o prisma criar os models de acordo com o banco de dados automaticamente
 - npx prisma db pull
 
+* Para o tratamento de erro
+- yarn add express-async-errors
+
 * Dependencias (não estou usando)
 - yarn add nodemon
+
+* Para adicionar bcryptjs
+- yarn add bcryptjs
+- yarn add @types/bcryptjs -D (tipagem do bcrypt)
