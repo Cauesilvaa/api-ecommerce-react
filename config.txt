@@ -1,3 +1,6 @@
+* Para rodar o projeto
+- yarn run dev
+
 * Para criar o projeto
 - yarn init -y
 - yarn add typescript @types/express ts-node-dev -D
