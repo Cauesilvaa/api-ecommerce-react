@@ -26,6 +26,10 @@
 * Dependencias (não estou usando)
 - yarn add nodemon
 
-* Para adicionar bcryptjs
+* Para instalar bcryptjs
 - yarn add bcryptjs
 - yarn add @types/bcryptjs -D (tipagem do bcrypt)
+
+* Para instalar jsonwebtoken
+- yarn add jsonwebtoken
+- "yarn add @types/jsonwebtoken -D"
