@@ -19,7 +19,7 @@ export class NotFound extends ApiErrors {
     }
 }
 
-export class Unouthorized extends ApiErrors {
+export class Unauthorized extends ApiErrors {
     constructor(message: string) {
         super(message, 401)
     }
