@@ -8,11 +8,21 @@ datasource db {
 }
 
 model user {
-  id       Int      @id @unique(map: "id_UNIQUE") @default(autoincrement())
-  name     String?  @db.VarChar(255)
-  email    String?  @unique(map: "email_UNIQUE") @db.VarChar(255)
-  password String?  @unique(map: "password_UNIQUE") @db.VarChar(255)
-  tokens   tokens[]
+  id         Int       @id @unique(map: "id_UNIQUE") @default(autoincrement())
+  name       String?   @db.VarChar(255)
+  email      String?   @unique(map: "email_UNIQUE") @db.VarChar(255)
+  password   String?   @unique(map: "password_UNIQUE") @db.VarChar(255)
+  lastName   String?   @db.VarChar(255)
+  birth      DateTime? @db.Date
+  cpf        String?   @db.VarChar(45)
+  country    String?   @db.VarChar(255)
+  cep        String?   @db.VarChar(255)
+  street     String?   @db.VarChar(255)
+  complement String?   @db.VarChar(255)
+  city       String?   @db.VarChar(255)
+  state      String?   @db.VarChar(255)
+  status     String?   @db.VarChar(45)
+  tokens     tokens[]
 }
 
 model tokens {

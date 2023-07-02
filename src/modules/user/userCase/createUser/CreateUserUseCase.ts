@@ -6,7 +6,20 @@ import { BadRequest } from '../../../../midlewares/error/apiErrors'
 
 export class CreateUserUseCase {
 
-    async execute({name, email, password}: CreateUserDTO): Promise<user> {
+    async execute({
+        name,
+        email,
+        password,
+        lastName,
+        cpf,        
+        country,    
+        cep,        
+        street,     
+        complement, 
+        city,       
+        state,   
+        birth
+    }: CreateUserDTO): Promise<user> {
 
         if (!name || !email || !password) throw new BadRequest("Necessario preencher todas as informações")
 
@@ -15,7 +28,21 @@ export class CreateUserUseCase {
         if (userAlreadyExist) throw new BadRequest("Usuario ja existente")
 
         const passowrdHash = await hash(password, 8)
-        const user = await prisma.user.create({data: {name, email, password: passowrdHash}})
+        const user = await prisma.user.create({data: {
+            name,
+            email,
+            password: passowrdHash,
+            lastName,
+            cpf,        
+            country,    
+            cep,        
+            street,     
+            complement, 
+            city,       
+            state,      
+            status: "Ativo",
+            birth: new Date(birth)
+        }})
 
         return user
     }

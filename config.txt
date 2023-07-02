@@ -4,6 +4,9 @@
 * Para rodar o prisma studio
 - yarn prisma studio
 
+* Assim que adicionar algo no banco e dar o 'npx prisma db pull' e ele não reconhecer. É necessario usar o:
+- yarn prisma generate
+
 * Para criar o projeto
 - yarn init -y
 - yarn add typescript @types/express ts-node-dev -D
